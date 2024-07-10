@@ -1,0 +1,32 @@
+<nav class="nav">
+  <div class="nav-container">
+    <h1>E-Comm</h1>
+
+    <div *ngIf="menuType === 'default'" class="search-container">
+      <input type="text" placeholder="Search for products">
+      <button>Search</button>
+    </div>
+
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <div [ngSwitch]="menuType">
+      <ul *ngSwitchCase="'default'" class="nav-menu" [class.active]="isMenuActive">
+        <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/seller-auth" (click)="closeMenu()">Seller</a></li>
+        <li><a href="#" (click)="closeMenu()">Login</a></li>
+        <li><a href="#" (click)="closeMenu()">Cart🛒(0)</a></li>
+      </ul>
+      
+      <ul *ngSwitchCase="'seller'" class="nav-menu" [class.active]="isMenuActive">
+        <li>{{sellerName|titlecase}}</li>
+        <li><a routerLink="/seller-home" (click)="closeMenu()">Product List</a></li>
+        <li><a routerLink="/seller-addproduct">Add Product</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

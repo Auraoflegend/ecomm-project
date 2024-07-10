@@ -1,0 +1,95 @@
+/* General styles for the product list container */
+.productlist {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.productlist h1 {
+    text-align: center;
+    color: #333;
+}
+
+.productlist p {
+    text-align: center;
+    color: #666;
+}
+
+/* Styles for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid #ddd !important;
+}
+
+/* Styles for the image */
+.table img {
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Styles for the FontAwesome icon */
+.table fa-icon {
+    cursor: pointer;
+    color: #ff4c4c;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.table fa-icon:hover {
+    color: #ff1c1c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .table, .table thead, .table tbody, .table th, .table td, .table tr {
+        display: block;
+        width: 100%;
+    }
+    
+    .table thead tr {
+        display: none;
+    }
+    
+    .table tr {
+        margin-bottom: 10px;
+    }
+    
+    .table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .table td:before {
+        content: attr(data-label);
+        flex: 1;
+        font-weight: bold;
+    }
+    
+    .table td img {
+        width: 80px;
+        height: 80px;
+    }
+}

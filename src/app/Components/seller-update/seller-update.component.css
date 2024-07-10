@@ -1,0 +1,100 @@
+/* General styles for the update product container */
+.updateproduct {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.updateproduct h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styles for the form */
+.updateproduct .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.updateproduct .form-group {
+    margin-bottom: 15px;
+}
+
+.updateproduct .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.updateproduct .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.updateproduct .input-group {
+    display: flex;
+    align-items: center;
+}
+
+.updateproduct .input-group-prepend .input-group-text {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    background-color: #eee;
+    font-size: 14px;
+}
+
+.updateproduct .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.updateproduct .form-control.select {
+    padding-right: 30px;
+}
+
+.updateproduct .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Styles for the button */
+.updateproduct .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.updateproduct .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .updateproduct {
+        padding: 15px;
+    }
+    
+    .updateproduct .form-control {
+        font-size: 13px;
+    }
+    
+    .updateproduct .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

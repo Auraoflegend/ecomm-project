@@ -1,0 +1,33 @@
+<!-- seller-home.component.html -->
+<div class="productlist">
+    <h1>All Product List</h1>
+    <p>{{ productmsg }}</p>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Color</th>
+                <th>Product Description</th>
+                <th>Product Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of productList">
+                <td><img [src]="item.image" width="100px" height="100px" alt="{{ item.name }}"></td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.colors }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.category }}</td>
+                <td>
+                    <fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon>
+                    <a routerLink="/seller-update/{{item.id}}"><fa-icon [icon]="edit"></fa-icon></a>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

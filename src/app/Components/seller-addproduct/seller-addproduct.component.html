@@ -1,0 +1,56 @@
+<div class="addproduct">
+    <h1>Add Product</h1>
+    <p class="message">{{ productmessage }}</p>
+
+    <form #addproduct="ngForm" (ngSubmit)="addProduct(addproduct.value)" class="form">
+        <div class="form-group">
+            <label for="name">Product Name</label>
+            <input type="text" class="form-control" id="name" name="name" ngModel required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Rs.</span>
+                </div>
+                <input type="text" class="form-control" id="price" name="price" ngModel required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="colors">Colors</label>
+            <select class="form-control" id="colors" name="colors" ngModel required>
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Yellow">Yellow</option>
+                <!-- Add more color options as needed -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select class="form-control" id="category" name="category" ngModel required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Home & Kitchen">Home & Kitchen</option>
+                <option value="Books">Books</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="text" class="form-control" id="image" name="image" ngModel required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" ngModel required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+</div>
