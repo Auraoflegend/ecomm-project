@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+
 import { product } from '../datatype';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,@Inject(PLATFORM_ID) private platformId: object) { }
 
   addProduct(data:product)
   {
